@@ -8,3 +8,4 @@ DROP TABLE public.specialize CASCADE;
 DROP TABLE public.insurance CASCADE;
 DROP TABLE public.insured_data CASCADE;
 DROP TABLE public.session CASCADE;
+DROP TABLE public.comprehensive_assessment CASCADE;
