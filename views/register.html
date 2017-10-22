@@ -1,0 +1,177 @@
+<div  class= "container" ng-controller='RegisterController'>
+<form class="form-horizontal" action='' method="POST" name="myForm">
+  <fieldset>
+    <div id="legend">
+      <legend class="" style="font-size:2em;text-align: center;font-weight:bold;">Registeration</legend>
+    </div>
+
+
+     <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">User Name</label>
+      <div class="controls">
+        <input type="text" id="username" name="username" placeholder="" class="input-xlarge" required>
+        
+      </div>
+    </div>
+
+     
+
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+        
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password -->
+      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+      <div class="controls">
+        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+       
+      </div>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">First Name</label>
+      <div class="controls">
+        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+        
+      </div>
+    </div>
+
+      <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Last Name</label>
+      <div class="controls">
+        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+       
+      </div>
+    </div>
+
+<label class="control-label"  style="margin-top:0;" for="username">Date</label>
+<div class="container" style="width:50%;margin-left:0;margin-top:0%;">
+
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+
+                    <input type='text' placeholder="MM/DD/YYYY" class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
+</div>
+ <label class="col-xs-1 control-label" style="margin-left:0;text-align:left;">Diagnosis</label>
+
+ <div class="form-group" style="margin-left:0;">
+       
+        <div class="col-xs-2 selectContainer">
+            <select class="form-control" name="diagnosis" ng-model="diag" >
+                
+                <option value="ADHD">ADHD</option>
+                <option value="black">Asperger's Syndrome</option>
+                <option value="green">Autism</option>
+                <option value="red">Cerebral Palsy</option>
+                <option value="yellow">Down Syndrome</option>
+                <option value="white">PDD</option>
+
+                <option value="red">Parkinson's Disease</option>
+                <option value="yellow">Stroke</option>
+                <option value="white">Traumatic Brain Injury</option>
+                <option value="Other">Other</option>
+
+            </select>
+        </div>
+        <input ng-if="diag=='Other'" type="text" placeholder="Please Specify"></input>
+  </div>
+   
+   <label class="control-label"  style="margin-top:0;" for="number">Phone Number</label>
+   <div>
+     <input type="text"  >
+   </div>
+
+
+   <label class="control-label"  style="margin-top:0;" for="number">Parent First Name</label>
+   <div>
+     <input type="text" >
+   </div>
+
+
+    <label class="control-label"  style="margin-top:0;" for="number">Parent Last Name</label>
+   <div>
+     <input type="text" >
+   </div>
+   
+   
+
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">E-mail</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+        <p class="help-block">Please provide your E-mail</p>
+      </div>
+    </div>
+
+
+<label class="control-label"  style="margin-top:0;" for="number">Mailing Address</label>
+<div style="width:50%">
+  <textarea class="form-control" rows="5"></textarea>
+</div>
+
+
+<label class="control-label"  style="margin-top:0;" for="number">Schedule Availability (Days and Times)</label>
+<div style="width:50%">
+  <textarea class="form-control" rows="5"></textarea>
+</div>
+
+<label class="control-label"  style="margin-top:0;" for="number">Reason for Referral</label>
+<div style="width:50%">
+  <textarea class="form-control" rows="5"></textarea>
+</div>
+
+
+<div class="form-group" style="margin-top:2.5%">
+       <label class="col-xs-2 control-label" style="margin-left:0;text-align:left;">Funding Source</label>
+        <div class="col-xs-2 selectContainer" style="margin-left:0">
+            <select class="form-control" name="diagnosis" ng-model="fund" >
+                
+                <option value="PrivatePay">Private Pay</option>
+                <option value="PrivateInsurance">Private Insurance (Non-State Funded)</option>
+                <option value="ESA">ESA Account</option>
+                <option value="MercyCare">ALTCS/MercyCare</option>
+                <option value="UnitedHealth">ALTCS/United Health Care</option>
+                <option value="Other">Other</option>
+
+            </select>
+        </div>
+        <input ng-if="fund=='Other'" type="text" placeholder="Please Specify"></input>
+  </div>
+
+    
+ 
+    <div class="control-group" style="margin-top:2.5%">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success" style="font-size:1.25em" ng-disabled="myForm.$invalid">Register</button>
+      </div>
+    </div>
+
+
+  </fieldset>
+</form>
+</div>
