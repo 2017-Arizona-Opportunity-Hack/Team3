@@ -99,11 +99,6 @@ def resgisterAdmin():
 
     except Exception as e:
         return jsonify({"success":"false"})
-<<<<<<< HEAD
-=======
-
->>>>>>> ac73a77383d9d2dbd155511e50c55852803ef5b5
-
 
 #@cross_origin(allow_headers=['Content-Type'])
 @api.route("/schedule_appointment",methods=['POST'])
@@ -119,12 +114,8 @@ def schedule_appointment():
         cursor.close()
         return jsonify({"success":'true'})
     except Exception as e:
-<<<<<<< HEAD
         abort(400,'Could not schedule appointment')
-=======
-        abort(400,'Could not schedule appointment because ')
 
->>>>>>> ac73a77383d9d2dbd155511e50c55852803ef5b5
 
 #@cross_origin(allow_headers=['Content-Type'])
 @api.route("/appointment_data")
@@ -163,10 +154,7 @@ def admin_login():
     except Exception as e:
         abort(400,'Admin login failed')
 
-<<<<<<< HEAD
-#@cross_origin(allow_headers=['Content-Type'])
-=======
->>>>>>> ac73a77383d9d2dbd155511e50c55852803ef5b5
+
 @api.route("/pending_appointments",methods=["GET"])
 def get_pending_appts():
     try:
@@ -197,18 +185,8 @@ def send_mail(emailText,emailto):
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
 
-<<<<<<< HEAD
 conn = psycopg2.connect("dbname=Ohacks user=ec2-user")
-api.run(debug=True, threaded=True, host = ‘0.0.0.0’, port=8082)
-=======
-#conn = psycopg2.connect("dbname=Ohacks user=postgres")
-#api.run(debug=True, threaded=True, host = '0.0.0.0', port=8082)
-
-conn = psycopg2.connect("dbname=Ohacks user=postgres")
 api.run(debug=True, threaded=True, host = '0.0.0.0', port=8082)
 
 
 
-#print(generate_password_hash('nmtsa123'))
-#pbkdf2:sha256:50000$T8MxPKQG$7add13d19f89bb5701b06cb89d20d73b8aabadd45e16f7f0b18a53a9d7da9894
->>>>>>> ac73a77383d9d2dbd155511e50c55852803ef5b5
