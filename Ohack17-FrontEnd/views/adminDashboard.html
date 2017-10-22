@@ -1,0 +1,58 @@
+
+<button type="button" class="btn btn-primary" ng-click = "showCurrentORHistory('current')" >Show Active Patients</button>
+<button type="button" class="btn btn-primary" ng-click = "showCurrentORHistory('history')" >Show Patients History</button>
+
+<div ng-if = "current == true" class="customScroll">
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Nameasdmin	</th>
+      <th>Last Name</th>
+      <th>Username</th>
+      <th>FeedBack</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  	<tr ng-repeat="history in historyData">
+  		<td>{{history.id}}</td>
+  		<td>{{history.firstName}}</td>
+  		<td>{{history.lastName}}</td>
+  		<td>{{history.userName}}</td>
+  		<td ><button type="button" class="btn btn-primary" ng-click = "showFeedBack(history)" ng-if="history.feedback">Show Feedback</button></td>
+  	</tr>
+    
+  </tbody>
+</table>
+</div>
+
+<div ng-if = "history == true" class="customScroll">
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Nameasdminasf	</th>
+      <th>Last Name</th>
+      <th>Username</th>
+      <th>FeedBack</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  	<tr ng-repeat="history in historyData">
+  		<td>{{history.id}}</td>
+  		<td>{{history.firstName}}</td>
+  		<td>{{history.lastName}}</td>
+  		<td>{{history.userName}}</td>
+  		<td ><button type="button" class="btn btn-primary" ng-click = "showFeedBack(history)" ng-if="history.feedback">Show Feedback</button></td>
+  	</tr>
+    
+  </tbody>
+</table>
+</div>
+
+	<div class="container" ng-if="showFeedBackDiv == true">
+		<h4>Comments for the Client</h4>
+		{{feedback}}
+	</div>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>ExpenseManager Beta v2.0</title>
+		<link rel="icon" href="./assests/icons/indian_rupee_white.ico"></link>
+
+		<!-- TODO: Check scripts and move to end of body tag -->
+		<script type="text/javascript" src="./js/jquery/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="./js/angularjs/angular-1.3.10.js"></script>
+		<script type="text/javascript" src="./js/ui-router-0.2.13/angular-ui-router.js"></script>
+
+		<script type="text/javascript" src="./js/highcharts-4.0.4/highcharts.src.js"></script>
+		<script type="text/javascript" src="./js/highcharts-4.0.4/exporting.src.js"></script>
+		<script type="text/javascript" src="./js/highcharts-ng/highcharts-ng.js"></script>
+
+		<script type="text/javascript" src="./js/ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+		<link rel="stylesheet" href="./js/bootstrap-3.3.2/css/bootstrap.min.css"></link>
+
+		<script type="text/javascript" src="./js/ui-notificaiton/angular-ui-notification.min.js"></script>
+		<link rel="stylesheet" href="./js/ui-notificaiton/angular-ui-notification.min.css"></link>
+
+		<link rel="stylesheet" href="assests/css/general.css"></link>
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/service/ExpenseUtilService.js"></script>
+		<script type="text/javascript" src="scripts/service/ExpenseService.js"></script>
+		<script type="text/javascript" src="scripts/overrides/Date.js"></script>
+		<script type="text/javascript" src="scripts/filters/inr-filer.js"></script>
+
+		<!-- MODULES -->
+		<script type="text/javascript" src="./scripts/modules/profile/year/Year-Module.js"></script>
+		<script type="text/javascript" src="scripts/modules/profile/month/Month-Module.js"></script>
+		<script type="text/javascript" src="scripts/modules/admin/insert/Insert-Module.js"></script>
+
+		<!-- YEAR CONTROLLERs -->
+		<script type="text/javascript" src="scripts/modules/profile/year/column/YearColumnCtrl.js"></script>
+		<script type="text/javascript" src="scripts/modules/profile/year/category/YearCategoryCtrl.js"></script>
+		<script type="text/javascript" src="scripts/modules/profile/year/pie/YearPieCtrl.js"></script>
+
+		<!-- MONTH CONTROLLERs -->
+		<script type="text/javascript" src="scripts/modules/profile/month/column/MonthColumnCtrl.js"></script>
+		<script type="text/javascript" src="scripts/modules/profile/month/category/MonthCategoryCtrl.js"></script>
+		<script type="text/javascript" src="scripts/modules/profile/month/pie/MonthPieCtrl.js"></script>
+
+		<!-- INSERT CONTROLLERs -->
+		<script type="text/javascript" src="scripts/modules/admin/insert/single/InsertSingleCtrl.js"></script>
+		<script type="text/javascript" src="scripts/modules/admin/insert/fromFile/InsertFileCtrl.js"></script>
+	</head>
+	<body ng-app="expenseManager" ng-controller="ExpenseAppRootController">
+		<!--  Nav Bar	-->
+		<div class="navbar navbar-default" role="navigation">
+		    <div class="container">
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand" href="#">ExpenseManager Beta v2.0</a>
+		        </div>
+		        <div class="navbar-collapse collapse">
+		            <ul class="nav navbar-nav">
+						<li ng-class="{active: isStateActive()}"><a href="#" ui-sref="profile.year.column">Profile</a></li>
+						<li ui-sref-active="active"><a href="#" ui-sref="admin.insert.single">Admin</a></li>
+					</ul>
+		        </div>
+		    </div>
+		</div>
+		<!--  Nav Bar	Ends	-->
+
+		<!-- Main Container Starts -->
+		<div class="container-fluid">
+			<ui-view></ui-view>
+		</div>
+		<!-- Main Container Ends -->
+
+	</body>
+</html>

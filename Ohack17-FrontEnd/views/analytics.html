@@ -1,0 +1,17 @@
+<div class="row">
+		<div class="col-xs-6"><canvas  id = "aChart"></canvas></div>
+		<div class="col-xs-6">
+		Project client's History
+		<select class="selectpicker"  data-selected-text-format="count" ng-model = "clientName">
+		  <option ng-repeat="client in Clientdata">{{client.name}}</option>
+		</select>
+			<canvas  id = "bChart"></canvas>
+		</div>
+		
+		<div class="col-xs-6">Project therapist's History
+			<select class="selectpicker"  data-selected-text-format="count" ng-model = "therapistName">
+			  <option ng-repeat="th in therapistData">{{th.name}}</option>
+			</select>
+			<canvas  id = "cChart"></canvas>
+		</div>
+</div>
