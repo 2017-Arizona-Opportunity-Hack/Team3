@@ -1,5 +1,3 @@
-# Team 3 Opportunity Hacks 2017
-
 ## Inspiration
 
 There are children and adults out in the world that lack some of the basic functions that most people consider make a person human. In an attempt to treat those suffering from various debilitating conditions Neurologic Music Therapy Services of Arizona (NMTSA) is working to pair the people that need the therapy with the therapists that can provide the therapy. One of the problems that NMTSA is currently facing is that they are unable to provide as much care as they want because they therapists must fill out similar reports by hand. This is where we come in. 
@@ -14,16 +12,16 @@ The product was built using a Postgresql database for the storing of information
 
 ## Challenges we ran into
 
-
+One of the problems that we had was making a functioning user login page that provides the access control that we need for the different forms and files as some are only needed for the therapists, some are need for both, and some are for therapist to client information on the therapy sessions. 
 
 ## Accomplishments that we're proud of
 
-
+We have a working database that can be scaled for use with however many different therapists that may exist in the NMTSA system as well as store the information for the majority of the forms in a single place. 
 
 ## What we learned
 
-
+REST api integration between front end and back end requires a lot of talking between the teams working on each. As well as that the best user experience is on that is intuitive and easy to use for the desired user groups.
 
 ## What's next for Team 3 NMTSA
 
-
+Sleep. Maybe some partying but a lot of sleep. 
